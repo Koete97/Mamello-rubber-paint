@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+
+  <link rel="stylesheet" href="output.css" />
+
+</head>
+<body>
+  <header>
+    <nav class="h-[80px] shadow-md">
+      <div class="flex justify-end mr-9 lg:hidden">
+        <button id="hamburger" class="top-0 left-0">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-8 h-8 mt-2 ml-[60%] stroke-red-600
+            md:w-10 md:h-10 md:mt-2 md:ml-[680px] md:stroke-red-600
+            lg:w-10 lg:h-10 lg:mt-2 lg:ml-64 lg:stroke-red-600">
+            <path stroke-linecap="round" stroke-linejoin="round"
+            d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" />
+          </svg>
+        </button>
+
+      </div>
+      <div class="w-40 h-20 absolute left-10 top-1" >
+        <img src="img/nav.jpg" alt="">
+      </div>
+      <div class="hidden absolute-left-12 top-6
+      md:hidden md:absolute md:right-12 md:top-6
+      lg:flex lg:absolute lg:right-12 lg:top-6">
+        <a class="text-xl text-red-700 font-semibold px-4" href="index.html">Home</a>
+        <a class="text-xl text-red-700 font-semibold px-4" href="product.html">Products</a>
+        <a class="text-xl text-red-700 font-semibold px-4" href="about.html">About</a>
+        <a class="text-xl text-white bg-red-700 font-semibold px-4 py-1 rounded-md" href="contact.html">Contacts</a>
+      </div>
+      
+    </nav>
+    <div id="mobile-menu" class="hidden bg-white h-fit w-full md:w-[400px] mt-4 mb-4 ml-4 relative">
+      <a href="index.html" class="block text-base font-semibold text-red-700 animation-slide">Home</a>
+      <a href="product.html" class="block text-base font-semibold text-red-700 animation-slide">Our Products</a>
+      <a href="about.html" class="block text-base font-semibold text-red-700 animation-slide">About us</a>
+      <a href="contact.html" class="block text-base font-semibold text-red-700 animation-slide">Contact us</a>
+    </div>
+
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      hamburger.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('animation-slide');
+      });
+
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('animation-slide');
+          });
+        });
+    </script>
+  </header>
+  <main>
+    <section class="h-screen bg-gray-100">
+      <div class="bg-gray-800 h-screen
+      md:bg-gray-800 md:h-screen
+      lg:bg-gradient-to-r lg:from-gray-700 lg:via-gray-700 lg:to-gray-700 lg:h-80 w-full mx-auto relative">
+        <img src="./img/hero.jpg" class="w-full h-full object-cover absolute mix-blend-overlay">
+        <div class="relative sm: w-full mx-auto h-[400px] shadow-md rounded-md
+        md:relative md:bg-transparent md:w-full md:mx-auto md:h-[400px] md:shadow-md md:rounded-md
+        lg:relative lg:bg-white lg:w-[800px] lg:mx-auto lg:h-[400px] lg:shadow-md lg:rounded-md lg:top-52">
+          <div>
+            <h1 class="text-center text-2xl text-gray-100 font-semibold pt-32
+            md:text-center md:text-5xl md:text-gray-100 md:font-semibold md:pt-24
+            lg:text-center lg:text-5xl lg:text-gray-700 lg:font-semibold lg:pt-5">Mamello <span class="text-gray-100
+            md:text-gray-100
+            lg:text-red-700">Rubber</span> Paints</h1>
+            <h2 class="text-center text-xl text-gray-200 pt-5
+            md:text-center md:text-3xl md:text-gray-200 md:pt-5
+            lg:text-center lg:text-3xl lg:text-red-700 lg:font-semibold lg:pt-5">Don't compromise rubberise</h2>
+          </div>
+          <p class="w-[300px] text-center text-gray-100 text-base mx-auto pt-5
+          md:w-[500px] md:text-center md:text-gray-100 md:text-xl md:mx-auto md:pt-5
+          lg:w-[500px] lg:text-center lg:text-gray-700 lg:text-xl lg:mx-auto lg:pt-5">We offer Gamazine, Rubber seal and Rubber paint. Best paint for roofs, walls, balconies, wood and plaster</p>
+          <div class="flex justify-center mt-10">
+            <a class="bg-white text-red-700 font-semibold py-2 px-8 rounded-md mt-5 text-base relative
+            md:bg-white md:text-red-700 md:font-semibold md:py-3 md:px-10 md:rounded-md md:mt-5 md:text-xl md:relative
+            lg:bg-red-700 lg:text-white lg:py-3 lg:px-10 lg:rounded-md lg:mt-5 lg:text-xl lg:relative" href="about.html">Read more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="hidden
+    md:hidden
+    lg:flex lg:h-screen lg:pt-48">
+      <div class="bg-gradient-to-r from-red-700 via-redfrom-red-700 to-gray-300 h-80 w-[1100px] mx-auto rounded-md relative">
+        <h1 class="text-5xl text-white font-semibold w-[700px] ml-10 pt-6">Do you have <span class="text-gray-700">rusty or damaged</span> roofs.</h1>
+        <p class="text-xl text-white mt-10 ml-10">Feel free to contact us to give solution with our quality paint</p>
+        <div class="mt-10 ml-52">
+          <a class="text-red-700 text-xl font-semibold bg-white px-12 py-3 rounded-md" href="contact.html">Call us</a>
+        </div>
+      </div>
+    </section>
+    <section class="h-fit bg-gray-100
+    md:h-fit md:bg-gray-100
+    lg:h-screen lg:bg-gray-100">
+    <div>
+      <h1 class="text-2xl text-gray-500 font-semibold pt-16 text-center
+      md:text-5xl md:text-gray-500 md:font-semibold md:pt-16 md:text-center
+      lg:text-5xl lg:text-gray-500 lg:font-semibold lg:pt-16 lg:text-center"><span class="text-red-700">Our</span> products</h1>
+    </div>
+      <div class="block justify-between pt-16
+      md:block md:justify-between md:pt-16
+      lg:flex lg:justify-between lg:px-16 lg:pt-28">
+        <div class="w-[300px] h-[400px] bg-gradient-to-b from-white via-white to-red-700 shadow-red-700 shadow-md rounded-md mx-auto mt-10
+        md:w-[450px] md:h-[400px] md:bg-gradient-to-b md:from-white md:via-white md:to-red-700 md:shadow-red-700 md:shadow-md md:rounded-md md:mx-auto
+        lg:w-[350px] lg:h-[400px] lg:bg-gradient-to-b lg:from-white lg:via-white lg:to-red-700 lg:shadow-red-700 lg:shadow-md lg:rounded-md lg:mx-auto">
+          <h1 class="text-center text-2xl text-red-700 font-semibold pt-5
+          md:text-center md:text-3xl md:text-red-700 md:font-semibold md:pt-5
+          lg:text-center lg:text-3xl lg:text-red-700 lg:font-semibold lg:pt-5">Rubber Liquid</h1>
+            <p class="text-base text-gray-500 text-justify w-64 mx-auto mt-6
+            md:text-xl md:text-gray-500 md:text-justify md:w-80 md:mx-auto md:mt-6
+            lg:text-xl lg:text-gray-500 lg:text-justify lg:w-72 lg:mx-auto lg:mt-6">Can be used for waterproofing, as an air barrier and protection against corrosion.</p>
+            <div class="flex justify-center pt-8">
+              <a class="bg-white text-red-700 font-semibold px-10 py-2 mx-16 my-20 rounded-md text-base
+              md:bg-white md:text-red-700 md:font-semibold md:px-12 md:py-3 md:mx-32 md:my-10 md:rounded-md md:text-xl
+              lg:bg-white lg:text-red-700 lg:font-semibold lg:px-12 lg:py-3 lg:mx-20 lg:my-6 lg:rounded-md lg:text-xl" href="product.html">More</a>
+            </div>
+        </div>
+        <div class="w-[300px] h-[400px] bg-gradient-to-b from-white via-white to-red-700 shadow-red-700 shadow-md rounded-md mx-auto mt-10
+        md:w-[450px] md:h-[400px] md:bg-gradient-to-b md:from-white md:via-white md:to-red-700 md:shadow-red-700 md:shadow-md md:rounded-md md:mx-auto
+        lg:w-[350px] lg:h-[400px] lg:bg-gradient-to-b lg:from-white lg:via-white lg:to-red-700 lg:shadow-red-700 lg:shadow-md lg:rounded-md lg:mx-auto">
+          <h1 class="text-center text-2xl text-red-700 font-semibold pt-5
+          md:text-center md:text-3xl md:text-red-700 md:font-semibold md:pt-5
+          lg:text-center lg:text-3xl lg:text-red-700 lg:font-semibold lg:pt-5">Rubber Seal</h1>
+            <p class="text-base text-gray-500 text-justify w-64 mx-auto mt-6
+            md:text-xl md:text-gray-500 md:text-justify md:w-80 md:mx-auto md:mt-6
+            lg:text-xl lg:text-gray-500 lg:text-justify lg:w-72 lg:mx-auto lg:mt-6">Can be used in components such as pumps, valves, pipes fittings and vacuum seals also in leaking roofs.</p>
+            <div class="flex justify-center pt-8">
+              <a class="bg-white text-red-700 font-semibold px-10 py-2 mx-16 my-20 rounded-md text-base
+              md:bg-white md:text-red-700 md:font-semibold md:px-12 md:py-3 md:mx-32 md:my-10 md:rounded-md md:text-xl
+              lg:bg-white lg:text-red-700 lg:font-semibold lg:px-12 lg:py-3 lg:mx-20 lg:my-6 lg:rounded-md lg:text-xl" href="product.html">More</a>
+            </div>
+        </div>
+        <div class="w-[300px] h-[400px] bg-gradient-to-b from-white via-white to-red-700 shadow-red-700 shadow-md rounded-md mx-auto mt-10
+        md:w-[450px] md:h-[400px] md:bg-gradient-to-b md:from-white md:via-white md:to-red-700 md:shadow-red-700 md:shadow-md md:rounded-md md:mx-auto
+        lg:w-[350px] lg:h-[400px] lg:bg-gradient-to-b lg:from-white lg:via-white lg:to-red-700 lg:shadow-red-700 lg:shadow-md lg:rounded-md lg:mx-auto">
+          <h1 class="text-center text-2xl text-red-700 font-semibold pt-5
+          md:text-center md:text-3xl md:text-red-700 md:font-semibold md:pt-5
+          lg:text-center lg:text-3xl lg:text-red-700 lg:font-semibold lg:pt-5">Gamazine</h1>
+            <p class="text-base text-gray-500 text-justify w-64 mx-auto mt-6
+            md:text-xl md:text-gray-500 md:text-justify md:w-80 md:mx-auto md:mt-6
+            lg:text-xl lg:text-gray-500 lg:text-justify lg:w-72 lg:mx-auto lg:mt-6">Granular plaster used as a decorative INTERIOR or EXTERIOR wall & ceiling coating</p>
+            <div class="flex justify-center pt-8">
+              <a class="bg-white text-red-700 font-semibold px-10 py-2 mx-16 my-20 rounded-md text-base
+              md:bg-white md:text-red-700 md:font-semibold md:px-12 md:py-3 md:mx-32 md:my-10 md:rounded-md md:text-xl
+              lg:bg-white lg:text-red-700 lg:font-semibold lg:px-12 lg:py-3 lg:mx-20 lg:my-6 lg:rounded-md lg:text-xl" href="product.html">More</a>
+            </div>
+        </div>
+      </div>
+
+    </section>
+    <section class="h-fit
+    md:h-screen
+    lg:h-screen">
+      <h1 class="text-2xl text-gray-500 font-semibold pt-16 text-center
+      md:text-5xl md:text-gray-500 md:font-semibold md:pt-16 md:text-center
+      lg:text-5xl lg:text-gray-500 lg:font-semibold lg:pt-16 lg:text-center">About <span class="text-red-700">us</span></h1>
+      <div class="relative w-[300px] h-[220px] rounded-md mx-auto mt-20
+      md:relative md:w-[600px] md:h-[400px] md:rounded-md md:mx-auto md:mt-20
+      lg:relative lg:w-[800px] lg:h-[600px] lg:rounded-md lg:mx-auto lg:mt-20">
+        <video class="w-full" controls>
+          <source src="vid/About.mkv">
+        </video>
+      </div>
+    </section>
+    <section class="h-fit bg-gray-100
+    md:h-fit md:bg-gray-100
+    lg:h-screen lg:bg-gray-100">
+      <div>
+        <h1 class="text-2xl text-gray-500 font-semibold mt-16 text-center
+        md:text-5xl md:text-gray-500 md:font-semibold md:mt-16 md:text-center
+        lg:text-5xl lg:text-gray-500 lg:font-semibold lg:mt-16 lg:text-center">Feedback from 500+ <span class="text-red-700">clients</span></h1>
+        <div id="testimonials" class="container mx-auto py-8">
+          <div class="grid grid-cols-1 gap-6">
+            <div id="testimonial1" class="bg-white rounded-lg shadow-md shadow-red-700 p-6 flex items-center h-60 w-[250px] mx-auto
+            md:bg-white md:rounded-md md:shadow-md md:shadow-red-700 md:p-6 md:flex md:items-center md:h-60 md:w-[600px] md:mx-auto
+            lg:bg-white lg:rounded-lg lg:shadow-md lg:shadow-red-700 lg:p-6 lg:flex lg:items-center lg:h-60 lg:w-[800px] lg:mx-auto">
+              <div class="mr-4">
+                <img id="testimonial-image1" src="" alt="Profile Image" class="hidden rounded-full w-16 h-16
+                md:hidden md:rounded-full md:w-16 md:h-16
+                lg:hidden lg:rounded-full lg:w-16 lg:h-16
+                xl:block xl:rounded-full xl:w-16 xl:h-16">
+              </div>
+              <div>
+                <p id="testimonial-text1" class="text-lg mb-4"></p>
+                <p id="testimonial-author1" class="text-red-700"></p>
+              </div>
+            </div>
+            <div id="testimonial2" class="bg-white rounded-lg shadow-md shadow-red-700 p-6 flex items-center h-60 w-[250px] mx-auto
+            md:bg-white md:rounded-md md:shadow-md md:shadow-red-700 md:p-6 md:flex md:items-center md:h-60 md:w-[600px] md:mx-auto
+            lg:bg-white lg:rounded-lg lg:shadow-md lg:shadow-red-700 lg:p-6 lg:flex lg:items-center lg:h-60 lg:w-[800px] lg:mx-auto">
+              <div class="mr-4">
+                <img id="testimonial-image2" src="" alt="Profile Image" class="hidden rounded-full w-16 h-16
+               md:hidden md:rounded-full md:w-16 md:h-16
+               lg:hidden lg:rounded-full lg:w-16 lg:h-16
+               xl:block xl:rounded-full xl:w-16 xl:h-16">
+              </div>
+              <div>
+                <p id="testimonial-text2" class="text-lg mb-4"></p>
+                <p id="testimonial-author2" class="text-red-700"></p>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-center mt-6">
+            <button id="next-btn" class="bg-red-700 hover:bg-red-950 text-white font-bold py-3 px-16 rounded">Next</button>
+          </div>
+        </div>
+        
+        
+      <script>
+        const testimonials = [
+          {
+            text: "Thepa e ne senyehile boholo ke marulelo a nelang empa tseo e bile pale ea maobane kamora ho sebelisa rubber liquid.",
+            author: "Miss Bokang",
+            image: "./img/parent.jpeg"
+          },
+          {
+            text: "Tanka eaka e ne tletse metsi a masootho tsohle li apere toka kamora ho etela Mamello rubber paint.",
+            author: "Mr Thabo",
+            image: "./img/parent1.jpeg"
+          },
+          {
+            text: "Kea leboha Mamello rubber paint, mabota aka matle hoo.",
+            author: "Mrs Lirontsho",
+            image: "./img/parent2.jfif"
+          },
+          // Add more testimonials as needed
+        ];
+
+        let currentIndex = 0;
+
+        function displayTestimonials(startIndex) {
+          for (let i = 0; i < 2; i++) {
+            const testimonial = testimonials[startIndex + i];
+            const testimonialElement = document.getElementById(`testimonial${i + 1}`);
+            testimonialElement.querySelector('.text-lg').innerText = testimonial.text;
+            testimonialElement.querySelector('.text-red-700').innerText = "- " + testimonial.author;
+            testimonialElement.querySelector('img').src = testimonial.image;
+          }
+        }
+
+        function showNextTestimonials() {
+          currentIndex = (currentIndex + 2) % testimonials.length;
+          displayTestimonials(currentIndex);
+        }
+
+        window.onload = function() {
+          displayTestimonials(currentIndex);
+          document.getElementById('next-btn').addEventListener('click', showNextTestimonials);
+        };
+
+
+      </script>
+    </section>
+  </main>
+  <footer>
+    <section class="bg-red-700">
+      <article class="max-w-[1000px] mx-auto py-16">
+        <div class="flex flex-col items-center">
+          <div class="flex space-x-4 items-center">
+            
+
+            <p class="text-sm font-semibold text-white">Mamello rubber paint</p>
+          </div>
+        </div>
+
+        <div class="mt-5 text-center">
+          <p class="text-white">
+            &quot; Worthwhile Services for
+            <span class="text-gray-700 font-semibold">Personal</span> /
+            <span class="text-gray-700 font-semibold">Businesses'</span>
+            needs &quot;
+          </p>
+        </div>
+
+        <div class="mt-10 flex flex-col space-x-4 items-center">
+          <h1 class="text-xl font-semibold mb-4 text-white">Our Location</h1>
+
+          <ul class="flex space-x-6">
+            <li
+              class="">
+              <h1 class="text-white">Maseru</h1>
+            </li>
+            <li
+              class="">
+              <h1 class="text-white">Mafeteng</h1>
+            </li>
+            <li
+              class="">
+              <h1 class="text-white">Hlotse</h1>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="bg-red-950 p-2">
+        <p class="text-center text-white font-semibold text-sm">
+          Mamello rubber paints <span class="text-gray-700">&copy;</span>
+          <span class="year">2024</span>. <span>All Rights Reserved</span>
+        </p>
+      </article>
+    </section>
+  </footer>
+</body>
+</html>

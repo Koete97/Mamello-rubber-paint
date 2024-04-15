@@ -878,6 +878,22 @@ video {
   height: 430px;
 }
 
+.h-\[800px\] {
+  height: 800px;
+}
+
+.h-\[1000px\] {
+  height: 1000px;
+}
+
+.h-\[900px\] {
+  height: 900px;
+}
+
+.h-\[200px\] {
+  height: 200px;
+}
+
 .w-16 {
   width: 4rem;
 }
@@ -1186,6 +1202,18 @@ video {
 
 .pb-0 {
   padding-bottom: 0px;
+}
+
+.pt-0 {
+  padding-top: 0px;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
+.pt-12 {
+  padding-top: 3rem;
 }
 
 .text-center {
